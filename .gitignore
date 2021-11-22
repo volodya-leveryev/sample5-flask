@@ -3,3 +3,7 @@
 
 # Library
 venv/
+
+# Database
+*.db
+migrations/

@@ -12,6 +12,26 @@
         <div class="row">
             <div class="col">
                 <h1>Hello</h1>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Фамилия</th>
+                            <th>Имя</th>
+                            <th>Отчество</th>
+                            <th>Номер</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for obj in objects %}
+                        <tr>
+                            <td>{{ obj.last_name }}</td>
+                            <td>{{ obj.first_name }}</td>
+                            <td>{{ obj.second_name }}</td>
+                            <td>{{ obj.number }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
