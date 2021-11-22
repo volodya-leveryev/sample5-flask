@@ -8,8 +8,8 @@ app.config['SECRET_KEY'] = 'secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-Migrate(app, db)
 csrf = CSRFProtect(app)
+Migrate(app, db)
 
 
 class Student(db.Model):

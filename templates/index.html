@@ -20,6 +20,8 @@
                             <th>Имя</th>
                             <th>Отчество</th>
                             <th>Номер</th>
+                            <th>&nbsp;</th>
+                            <th>&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,10 +31,21 @@
                             <td>{{ obj.first_name }}</td>
                             <td>{{ obj.second_name }}</td>
                             <td>{{ obj.number }}</td>
+                            <td>
+                                <a role="button" href="/delete/{{ obj.id }}" class="text-danger">
+                                    <i class="bi bi-trash-fill"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a role="button" href="/form/{{ obj.id }}">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                            </td>
                         </tr>
-                        {% endfor %}
+                    {% endfor %}
                     </tbody>
                 </table>
+                <a role="button" class="btn btn-primary" href="/form/">Добавить</a>
             </div>
         </div>
     </div>
