@@ -6,18 +6,21 @@
 
 * `venv\scripts\activate.ps1`
 * `$ENV:FLASK_APP = "app"`
+* `$ENV:FLASK_ENV = "development"`
 * `flask run`
 
 В командной строке Windows:
 
 * `venv\scripts\activate.bat`
 * `set FLASK_APP=app`
+* `set FLASK_APP=development`
 * `flask run`
 
 В Git Bash (Windows):
 
 * `. venv/scripts/activate`
 * `export FLASK_APP=app`
+* `export FLASK_APP=development`
 * `flask run`
 
 

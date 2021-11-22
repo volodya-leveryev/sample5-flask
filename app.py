@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
@@ -17,7 +17,15 @@ class Student(db.Model):
     number = db.Column(db.String(20), unique=True, nullable=False)
 
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def index_page():
+    if request.method == 'POST':
+        student = Student()
+        student.last_name = request.form['last_name']
+        student.first_name = request.form['first_name']
+        student.second_name = request.form['second_name']
+        student.number = request.form['number']
+        db.session.add(student)
+        db.session.commit()
     students = Student.query.all()
     return render_template('index.html', objects=students)
