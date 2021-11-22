@@ -1,3 +1,6 @@
+# IDE and editor settings
+.vscode/
+
 # Build results
 *.pyc
 
